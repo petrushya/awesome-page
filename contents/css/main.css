@@ -27,6 +27,9 @@ p, a, button{
   font-style: normal;
   font-size: 18px;
 }
+img{
+	max-inline-size: 100%;
+}
 /* wrapper to get uniform box width */
 .wrapper{
   inline-size: 1020px;
@@ -70,10 +73,6 @@ header a:is(:link, :visited, :hover, :active){
 .someinfo{
   flex: 1;
 }
-.portrait img{
-  inline-size: 500px;
-  block-size: auto;
-}
 .someinfo p:first-child{
   font-weight: 900;
   font-size: 48px;
@@ -99,6 +98,7 @@ button{
   text-align: center;
 }
 .card img{
+	display: block;
   border-radius: 1rem;
   border: 4px solid #3882f6;
 }
