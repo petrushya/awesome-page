@@ -1,0 +1,148 @@
+
+/* On the Google Fonts website we collect the necessary fonts from the Roboto family */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,300&display=swap');
+
+/* remove indents from all elements and make all boxes the same type border-box */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* arrange the main elements of the body, assign the desired font-family and main font-color to all elements */
+body{
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  color: #1f2937;
+}
+/* stylize the typography used a bit. */
+h1{
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rlh auto;
+}
+p, a, button{
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+/* wrapper to get uniform box width */
+.wrapper{
+  inline-size: 1020px;
+  margin: 0 auto;
+}
+/* style the elements of the first block */
+header{
+  background-color: #1f2937;
+  color: #f9faf8;
+}
+header a:is(:link, :visited, :hover, :active){
+  text-decoration: none;
+  color: #f9faf8;
+}
+.logo{
+  font-weight: 700;
+  font-size: 24px;
+}
+.wrapper.header{
+  display: flex;
+  flex-direction: column;
+}
+.navigate, .portrait{
+  display: flex;
+  justify-content: space-between;
+}
+.navigate{
+  align-items: flex-end;
+  margin-top: 0.75rlh;
+}
+.navigate ol{
+  display: flex;
+  column-gap: 3vw;
+  list-style-type: none;
+}
+.portrait{
+  align-items: center;
+  column-gap: 5vi;
+  margin: 3rlh 0;
+}
+.someinfo{
+  flex: 1;
+}
+.portrait img{
+  inline-size: 500px;
+  block-size: auto;
+}
+.someinfo p:first-child{
+  font-weight: 900;
+  font-size: 48px;
+}
+button{
+  border-radius: 10px;
+  border: none;
+  background-color: #3882f6;
+  padding: 0.5em 1.5em;
+  font-weight: 700;
+  margin-top: 1em;
+  cursor: pointer;
+  color: #f9faf8;/* prevent the browser from changing colors */
+}
+.wrapper.top{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 5rem;
+}
+.card{
+  inline-size: 150px;
+  text-align: center;
+}
+.card img{
+  border-radius: 1rem;
+  border: 4px solid #3882f6;
+}
+/* style the elements of the quote block */
+blockquote{
+  padding: 5rem 0;
+  background-color: #e5e7eb;
+}
+blockquote p{
+  padding: 0 4.5rem;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 36px;
+}
+cite{
+  display: block;
+  margin-right: 4.5rem;
+  text-align: right;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px; /* after changing the inline element to a block element, restore the font size */
+}
+/* styling the last block */
+.wrapper.bottom{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #3882f6;
+  margin: 5rem auto;
+  padding: 3rem 0;
+  border-radius: 10px;
+  color: #f9faf8;
+}
+.bottom button{
+  margin-top: 0;
+  border: 2px solid #f9faf8;
+}
+/* styling the footer block */
+footer{
+  background-color: #1f2937;
+  text-align: center;
+  color: #f9faf8;
+  padding: 2rem 0;
+}
+span{
+  font-size: 20px;
+}
