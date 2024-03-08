@@ -16,32 +16,39 @@ body{
   color: #1f2937;
 }
 /* stylize the typography used a bit. */
-h1{
-  font-weight: 900;
-  font-size: 2rem;
-  text-align: center;
-  margin: 2rlh auto;
-}
-p, a, button{
+p, a, cite{
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
 }
+/* General styling of repeating elements */
+a:is(:link, :visited, :hover, :active){
+  text-decoration: none;
+  color: #f9faf8;
+}
 img{
 	max-inline-size: 100%;
+}
+button{
+  border-radius: 10px;
+  border: none;
+  background-color: #3882f6;
+  padding: 0.5em 1.5em;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  margin-top: 1em;
+  cursor: pointer;
+  color: #f9faf8;
 }
 /* wrapper to get uniform box width */
 .wrapper{
   inline-size: 1020px;
   margin: 0 auto;
 }
-/* style the elements of the first block */
+/* style the elements of the header block */
 header{
   background-color: #1f2937;
-  color: #f9faf8;
-}
-header a:is(:link, :visited, :hover, :active){
-  text-decoration: none;
   color: #f9faf8;
 }
 .logo{
@@ -77,15 +84,12 @@ header a:is(:link, :visited, :hover, :active){
   font-weight: 900;
   font-size: 48px;
 }
-button{
-  border-radius: 10px;
-  border: none;
-  background-color: #3882f6;
-  padding: 0.5em 1.5em;
-  font-weight: 700;
-  margin-top: 1em;
-  cursor: pointer;
-  color: #f9faf8;/* prevent the browser from changing colors */
+/* style the elements of the main top block */
+h1{
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rlh auto;
 }
 .wrapper.top{
   display: flex;
@@ -94,11 +98,15 @@ button{
   margin-bottom: 5rem;
 }
 .card{
-  inline-size: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 0.75rem;
+  inline-size: 158px;
   text-align: center;
 }
 .card img{
-	display: block;
+	box-sizing: content-box;
   border-radius: 1rem;
   border: 4px solid #3882f6;
 }
@@ -117,9 +125,7 @@ cite{
   display: block;
   margin-right: 4.5rem;
   text-align: right;
-  font-style: normal;
   font-weight: 700;
-  font-size: 18px; /* after changing the inline element to a block element, restore the font size */
 }
 /* styling the last block */
 .wrapper.bottom{
@@ -130,7 +136,6 @@ cite{
   margin: 5rem auto;
   padding: 3rem 0;
   border-radius: 10px;
-  color: #f9faf8;
 }
 .bottom button{
   margin-top: 0;
